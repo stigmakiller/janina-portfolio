@@ -1,0 +1,4 @@
+(()=>{const nav=document.querySelector('header nav,.nav nav,nav');if(!nav)return;
+let btn=document.querySelector('.burger');if(btn){btn.classList.add('mnav-btn');}else{btn=document.createElement('button');btn.className='mnav-btn';btn.setAttribute('aria-label','Menu');btn.innerHTML='<span></span><span></span><span></span>';const host=nav.parentElement;const bag=[...host.children].find(e=>e.matches('button,.pill,.bag,.cart'));host.insertBefore(btn,bag||null);}
+const m=document.createElement('div');m.className='mnav';m.innerHTML='<button class="x" aria-label="Close">×</button>'+[...nav.querySelectorAll('a')].map(a=>`<a href="${a.getAttribute('href')}">${a.textContent}</a>`).join('');document.body.appendChild(m);
+btn.addEventListener('click',()=>m.classList.add('on'));m.addEventListener('click',e=>{if(e.target.closest('a,.x'))m.classList.remove('on')});})();
