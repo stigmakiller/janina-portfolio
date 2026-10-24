@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOTE Jewellery — Say Yes in Riga (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/kote_badge.svg"><link rel="stylesheet" href="styles.css"></head><body><div style="position:fixed;left:10px;bottom:10px;z-index:2147483647;background:rgba(0,0,0,.72);color:#fff;font:12px/1.3 system-ui,sans-serif;padding:6px 10px;border-radius:6px;max-width:80vw;pointer-events:none">Unofficial concept redesign by Janina Nasibova — not affiliated with KOTE Jewellery. Demo project.</div>
+<div class="concept">Concept redesign · self-initiated project, not the official KOTE website · real KOTE photos &amp; video</div>
+<header class="nav"><a href="#top" class="logo"><img src="img/kote_badge.svg" alt="KOTE Jewellery"><span>KOTE</span></a>
+<nav><a href="#shop">Shop</a><a href="#moments">Moments</a><a href="#quiz">Which KOTE?</a><a href="#visit">Visit</a></nav>
+<div class="navr"><button class="pill" data-open="book">Book a free consultation</button><button class="bagbtn" id="bagBtn" aria-label="Bag">Bag <b id="bagCount">0</b></button></div></header>
+
+<section class="hero" id="top">
+ <div class="hleft"><p class="mono">Riga jewellers · Since 1992</p><h1>Say yes<br><em>in Riga.</em></h1><p class="sub">Engagement rings, coloured stones, diamonds natural or lab-grown, and pieces made from scratch at the bench.</p>
+ <div class="ctas"><a class="btn" href="#shop">Browse the pieces</a><a class="btn ghost" href="#quiz">Which KOTE are you?</a></div></div>
+ <div class="stage" aria-hidden="true"><canvas id="sphere"></canvas><div class="bigkote">KOTE</div><p class="mono stagecap">High jewellery · Since 1992</p></div>
+</section>
+
+<div class="marquee"><div class="track" id="mq"></div></div>
+
+<section class="stack" id="why"><div class="stackhead"><p class="mono">Why people walk into Raiņa 31</p><h2>Fine jewellery, <em>zero</em> drama.</h2></div>
+ <div class="cards">
+  <article class="card c1"><span class="mono">01</span><h3>Natural stones</h3><p>Real stones you can see in person before you fall for one.</p><img src="img/6239_ring4.jpg" alt=""></article>
+  <article class="card c2"><span class="mono">02</span><h3>Lab-grown. Love-grown.</h3><p>Natural or lab-grown diamond. Same sparkle, your call. We won't judge, the ring won't either.</p><img src="img/ring_white.jpg" alt=""></article>
+  <article class="card c3"><span class="mono">03</span><h3>Made from scratch</h3><p>Bring a sketch, a photo or a feeling. The bench does the rest.</p><img src="img/atelier_hands.jpg" alt=""></article>
+  <article class="card c4"><span class="mono">04</span><h3>Wrapped like a secret</h3><p>Graphite box, gold-foil logo, velvet inside. Opening it is half the fun.</p><img src="img/kote_box.jpg" alt=""></article>
+ </div></section>
+
+<section class="moments" id="moments"><div class="mhead"><p class="mono">Human moments · all real</p><h2>Rocks that won't get<br>you in <em>trouble.</em></h2></div>
+ <div class="mtrack" id="mtrack">
+  <figure class="m tall"><video id="vid" src="video/kote_craft.mp4" poster="img/video_poster.jpg" muted loop playsinline autoplay></video><figcaption>At the bench, Raiņa bulvāris</figcaption></figure>
+  <figure class="m tall"><img src="img/client_callas.jpg" alt="Client with calla lilies and KOTE rings"><figcaption>Callas, rings, yes.</figcaption></figure>
+  <figure class="m"><img src="img/atelier_hands.jpg" class="bw" alt="Jeweller's hands at work"><figcaption>Made by hand, B&amp;W edition</figcaption></figure>
+  <figure class="m tall"><img src="img/client_bands.jpg" alt="Wedding bands in a grey box"><figcaption>Two bands, one box</figcaption></figure>
+  <figure class="m tall"><img src="img/ritual_champagne.jpg" alt="Champagne at KOTE"><figcaption>Bubbles optional. Recommended.</figcaption></figure>
+  <figure class="m tall"><img src="img/ritual_pack.jpg" alt="KOTE packaging"><figcaption>The unwrapping moment</figcaption></figure>
+  <figure class="m tall sofia"><img src="img/sofia_04.jpg" alt="Sofia Opikova"><figcaption>Sofia Opikova · KOTE</figcaption></figure>
+ </div></section>
+
+<section class="quiz" id="quiz"><div class="qbox">
+ <p class="mono">60-second quiz</p><h2>Which <em>KOTE</em> are you?</h2>
+ <div id="qbody"></div></div></section>
+
+<section class="shop" id="shop"><div class="shophead"><h2>The <em>pieces.</em></h2><p class="mono">Price on request · ask about availability</p></div>
+ <div class="filters" id="filters">
+  <div><span class="mono">Type</span><button data-f="type" data-v="all" class="on">All</button><button data-f="type" data-v="engagement">Engagement</button><button data-f="type" data-v="ring">Rings</button><button data-f="type" data-v="wedding">Wedding</button><button data-f="type" data-v="earrings">Earrings</button><button data-f="type" data-v="necklace">Pendants</button></div>
+  <div><span class="mono">Stone</span><button data-f="stone" data-v="all" class="on">All</button><button data-f="stone" data-v="diamond">Diamond (natural or lab-grown)</button><button data-f="stone" data-v="colour">Coloured gemstones</button><button data-f="stone" data-v="clear">Clear stones</button></div>
+  <div><span class="mono">Metal</span><button data-f="metal" data-v="all" class="on">All</button><button data-f="metal" data-v="yellow">Yellow tone</button><button data-f="metal" data-v="white">White tone</button><button data-f="metal" data-v="rose">Rose tone</button></div>
+ </div>
+ <div class="grid" id="grid"></div>
+ <a class="bespoke" data-open="book"><img src="img/atelier_bench.jpg" alt=""><div><p class="mono">Bespoke</p><h3>Nothing here is quite <em>you?</em></h3><p>Book a free consultation and design it from scratch.</p></div></a>
+</section>
+
+<section class="visit" id="visit"><div><p class="mono">Visit</p><h2>Raiņa bulvāris 31–6,<br><em>Riga.</em></h2><p>Mon–Sat 12:00–18:00. Come for a look, stay for a coffee-length chat.</p><button class="btn" data-open="book">Book a free consultation</button></div><img src="img/sofia_10.jpg" alt="Sofia Opikova"></section>
+<footer><div class="fbrand"><img src="img/kote_badge.svg" alt="KOTE"><p class="mono since">High jewellery · Since 1992</p></div><p class="mono">Concept by Janina Nasibova · photos &amp; video © KOTE Jewellery</p></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer"><div class="dh"><h3>Your bag</h3><button class="x" data-close>×</button></div><div id="bagList"></div><div class="df"><p class="mono">Prices on request. We'll confirm everything in writing.</p><button class="btn" id="toCheckout">Request checkout</button></div></aside>
+<div class="modal" id="pmodal"><div class="mbox prod"><button class="x" data-close>×</button><div id="pbody"></div></div></div>
+<div class="modal" id="checkout"><div class="mbox"><button class="x" data-close>×</button><h3>Checkout <em>request</em></h3>
+<form id="coForm"><div id="coItems" class="coitems"></div>
+<label>Name<input required name="name"></label><label>Email<input required type="email" name="email"></label>
+<label class="gift"><input type="checkbox" name="gift" checked><img src="img/kote_box.jpg" alt="KOTE gift box"><span><b>KOTE gift box</b><br>Graphite box with gold-foil logo, velvet insert &amp; card</span></label>
+<label>Note for the card<textarea name="note" placeholder="Will you…?"></textarea></label>
+<label>Collection<select name="del"><option>Pick up at Raiņa bulvāris 31–6</option><option>Ask about delivery</option></select></label>
+<button class="btn" type="submit">Send request</button></form><div class="done" id="coDone" hidden><h3>Request sent <em>(concept)</em></h3><p>KOTE would reply in writing with price and availability.</p></div></div></div>
+<div class="modal" id="book"><div class="mbox"><button class="x" data-close>×</button><h3>Free <em>consultation</em></h3><p class="mono">Mon–Sat 12:00–18:00 · Raiņa bulvāris 31–6</p>
+<form id="bkForm"><label>Day<input type="date" required name="d" id="bkDate"></label><div class="slots" id="slots"></div>
+<label>About<select name="t"><option>Engagement ring</option><option>Wedding bands</option><option>Bespoke piece</option><option>Coloured gemstones</option><option>Something else</option></select></label>
+<label>Name<input required name="n"></label><label>Email<input required type="email" name="e"></label><button class="btn" type="submit">Book</button></form><div class="done" id="bkDone" hidden><h3>See you <em>soon.</em></h3><p id="bkMsg"></p></div></div></div>
+<div class="stamp" id="stamp"><img src="img/kote_badge.svg" alt=""></div>
+<div class="cursor" id="cursor"></div>
+<script src="app.js"></script><script src="sphere.js"></script></body></html>
